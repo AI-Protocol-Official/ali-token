@@ -1,0 +1,56 @@
+{
+  "name": "@ai-protocol/ali-token",
+  "version": "1.0.0",
+  "description": "AI Protocol ERC20 token",
+  "main": "index.js",
+  "scripts": {
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "verify-testnet": "npm run verify-goerli && npm run verify-binance_testnet && npm run verify-opBnb_testnet && npm run verify-base_goerli",
+    "verify": "npm run verify-mainnet && npm run verify-binance && npm run verify-opBnb && npm run verify-base_mainnet",
+    "verify-goerli": "hardhat etherscan-verify --network goerli --api-key $ETHERSCAN_KEY",
+    "verify-binance_testnet": "hardhat etherscan-verify --network binance_testnet --api-key $BSCSCAN_KEY",
+    "verify-opBnb_testnet": "hardhat etherscan-verify --network opBnb_testnet --api-key $BSCSCAN_KEY --api-url https://api-opbnb-testnet.bscscan.com/",
+    "verify-base_goerli": "hardhat etherscan-verify --network base_goerli --api-key $BASESCAN_KEY --api-url https://api-goerli.basescan.org/",
+    "verify-mainnet": "hardhat etherscan-verify --network mainnet --api-key $ETHERSCAN_KEY",
+    "verify-binance": "hardhat etherscan-verify --network binance --api-key $BSCSCAN_KEY",
+    "verify-opBnb": "hardhat etherscan-verify --network opBnb --api-key $BSCSCAN_KEY --api-url https://opbnbscan.com",
+    "verify-base_mainnet": "hardhat etherscan-verify --network base_mainnet --api-key $BASESCAN_KEY --api-url https://api.basescan.org"
+  },
+  "keywords": [],
+  "author": "AI Protocol",
+  "license": "MIT",
+  "dependencies": {
+    "@lazy-sol/access-control": "github:lazy-sol/access-control",
+    "@ai-protocol/advanced-erc20": "github:AI-Protocol-Official/advanced-erc20",
+    "@nomiclabs/hardhat-truffle5": "^2.0.7",
+    "@nomiclabs/hardhat-web3": "^2.0.0",
+    "@openzeppelin/contracts": "4.9.3",
+    "@openzeppelin/contracts-upgradeable": "4.9.3",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.20.1",
+    "hardhat-dependency-compiler": "^1.1.3",
+    "hardhat-deploy": "^0.11.45"
+  },
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.4.1",
+    "chai-subset": "^1.6.0",
+    "eth-sig-util": "^3.0.1",
+    "ethereumjs-util": "^7.1.5",
+    "ethereumjs-wallet": "^1.0.2",
+    "loglevel": "^1.9.1",
+    "solidity-coverage": "^0.8.8",
+    "ethereum-hdwallet": "^0.1.2"
+  },
+  "overrides": {
+    "minimatch": "^3.0.5",
+    "yargs-parser": "^5.0.1",
+    "flat": "^5.0.1",
+    "eth-gas-reporter": "^0.0.5",
+    "lodash": "^4.17.20",
+    "shelljs": "^0.8.4"
+  }
+}
