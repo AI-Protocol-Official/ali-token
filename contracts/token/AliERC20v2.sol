@@ -8,7 +8,7 @@ import "@ai-protocol/advanced-erc20/contracts/interfaces/EIP3009.sol";
 import "@ai-protocol/advanced-erc20/contracts/lib/AddressUtils.sol";
 import "@ai-protocol/advanced-erc20/contracts/lib/ECDSA.sol";
 
-import "@lazy-sol/access-control/contracts/AccessControl.sol";
+import "@ai-protocol/access-control/contracts/AccessControl.sol";
 
 /**
  * @title Artificial Liquid Intelligence ERC20 Token (AI Protocol, ALI)
